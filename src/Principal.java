@@ -1,4 +1,3 @@
-package ScreenMatch;
 import br.com.alura.screenmatch.modelos.Filme;
 
 public class Principal {
