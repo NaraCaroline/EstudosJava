@@ -4,6 +4,8 @@ import br.com.alura.screenmatch.modelos.Episodio;
 import br.com.alura.screenmatch.modelos.Filme;
 import br.com.alura.screenmatch.modelos.Serie;
 
+import java.util.ArrayList;
+
 public class Principal {
     public static void main(String[] args) {
         Filme meuFilme = new Filme();
@@ -47,5 +49,23 @@ public class Principal {
         episodio.setSerie(lost);
         episodio.setTotalVisualizacoes(300);
         filtro.filtra(episodio);
+
+        Filme filmeDaNara   = new Filme();
+        filmeDaNara.setNome("The Seventh Seal");
+        filmeDaNara.setDiretor("Ingmar Bergman");
+        filmeDaNara.setAnoDeLancamento(1957);
+        filmeDaNara.setDuracaoEmMinutos(96);
+        filmeDaNara.avalia(10);
+
+        ArrayList<Filme> listaDeFilmes = new ArrayList<>();
+        listaDeFilmes.add(filmeDaNara);
+        listaDeFilmes.add(meuFilme);
+        listaDeFilmes.add(outroFilme);
+        System.out.println("Tamanho da lista: " + listaDeFilmes.size());
+        System.out.println("Primeiro filme: " + listaDeFilmes.get(0).getNome());
+        System.out.println(listaDeFilmes);
+        System.out.println("Segundo filme: " + listaDeFilmes.get(1).getNome());
+        System.out.println("Terceiro filme: " + listaDeFilmes.get(2).getNome());
+
     }
 }
